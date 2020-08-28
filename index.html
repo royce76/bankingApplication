@@ -20,7 +20,7 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body id="body">
+<body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,12 +132,15 @@
       </li>
     </ul>
   </footer>
-    <div id="layer" class="card bg-dark text-white">
-      <img id="imgLayer" src="img/layer.jpg" class="card-img" alt="security">
-      <div class="card-img-overlay">
-        <h5 class="card-title">Sécurité</h5>
+    <div id="divLayer">
+      <div id="layer" class="card bg-dark text-white">
+        <img id="imgLayer" src="img/layer.jpg" class="card-img" alt="security">
+        <article class="card-img-overlay">
+          <h5 class="card-title">Sécurité</h5>
+          <p id="messageSecurity" class="card-text"></p>
+          <button id="buttonLayer" type="button" class="btn btn-info">Accepter</button>
+        </article>
       </div>
-      <button id="buttonLayer" type="button" class="btn btn-info">Accepter</button>
     </div>
   <div class="spinner-border" role="status">
     <span class="sr-only">Loading...</span>

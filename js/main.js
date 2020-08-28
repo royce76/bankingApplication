@@ -1,3 +1,9 @@
+let buttonLayer = document.getElementById("buttonLayer");
+
+buttonLayer.addEventListener("click", function() {
+    document.getElementById("divLayer").style.display = "none";
+});
+
 //Loading figure use to see if request id done
 let loading = document.querySelector(".spinner-border");
 
@@ -27,18 +33,6 @@ function security() {
 }
 
 function showMessage(data) {
-    let message = document.createElement("p");
-    message.classList.add("card-text");
-    document.getElementsByClassName("card-img-overlay")[0].appendChild(message);
-    message.innerText = data["alert"];
+    let messageSecurity = document.getElementById("messageSecurity");
+    messageSecurity.innerText = data["alert"];
 }
-
-let buttonLayer = document.getElementById("buttonLayer");
-
-buttonLayer.addEventListener("click", function() {
-    document.getElementById("body").style.position = "unset";
-    document.getElementById("layer").style.position = "unset";
-    document.getElementById("layer").style.zIndex = "initial";
-
-    document.getElementById("layer").classList.add("d-none");
-});

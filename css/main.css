@@ -89,6 +89,18 @@ textarea {
 
    /*GENERAL RULES*/
 
+   #body {
+     position: relative;
+     background-color: red;
+   }
+
+   #layer {
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     z-index: 1;
+   }
+
    /*UTILITY CLASSES*/
 
    .marginAuto {

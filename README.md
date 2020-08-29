@@ -14,7 +14,7 @@
 >
 >> Go on the link [Banque Normandie](https://royce76.github.io/bankingApplication/index.html).
 >
-> - ## COMMITS
+>> - ## COMMITS
 >
 >> CLICK ON [COMMITS](https://github.com/royce76/bankingApplication/commits/master).
 >

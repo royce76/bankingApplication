@@ -33,7 +33,8 @@ function show(data) {
                 let emprunt = document.createElement("li");
                 document.getElementById("taux").appendChild(emprunt);
                 emprunt.classList.add("list-group-item");
-                emprunt.innerText = prop + ' = ' + data[preciseData][prop] + '.';    
+                emprunt.innerText = prop + ' = ' + data[preciseData][prop] + '.';
+                emprunt.style.textAlign = "center";    
             } 
         }
         else if(preciseData === "Cours de la Bourse") {
@@ -42,7 +43,7 @@ function show(data) {
                 document.getElementById("coursDeLaBourse").appendChild(bourseData);
                 bourseData.classList.add("list-group-item");
                 bourseData.innerText = prop + ' = (' + data[preciseData][prop][0] + ', ' + data[preciseData][prop][1] +').' ;    
-   
+                bourseData.style.textAlign = "center";
             } 
         }
         if(preciseData === "Cours de la monnaie") {
@@ -50,7 +51,8 @@ function show(data) {
                 let monnaie = document.createElement("li");
                 document.getElementById("CoursDeLaMonnaie").appendChild(monnaie);
                 monnaie.classList.add("list-group-item");
-                monnaie.innerText = prop + ' = ' + data[preciseData][prop] + '.';    
+                monnaie.innerText = prop + ' = ' + data[preciseData][prop] + '.';
+                monnaie.style.textAlign = "center";    
             } 
         } 
     }

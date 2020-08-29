@@ -20,7 +20,7 @@
 >
 >> - ## WIREFRAMES
 >
->> Go to [WIREFRAME](https://github.com/royce76/bankingApplication/tree/master/doc). You will find one wireframe from form.html. 
+>> Go to [WIREFRAME](https://github.com/royce76/bankingApplication/tree/master/doc/wireframe). You will find one wireframe from form.html. 
 >
 >> - ## My kanban
 >

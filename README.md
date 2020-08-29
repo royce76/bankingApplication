@@ -1,4 +1,4 @@
->>                             ## Chooseyourboss.com
+>> - ## BANQUE NORMANDIE
 >
 >
 >> The project's goal is to know if I can use  ***AJAX Request*** and ***oriented-object-programming***.

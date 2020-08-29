@@ -33,6 +33,7 @@ function showBlog(dataBlog) {
             document.querySelectorAll(".list-group")[i].appendChild(articleListe);
             articleListe.classList.add("list-group-item");
             articleListe.innerText = prop + ' = ' + dataBlog[i][prop];
+            articleListe.style.textAlign = "center";
         }
     }
 }

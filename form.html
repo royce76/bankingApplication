@@ -103,16 +103,25 @@
                 <input type="email" class="form-control" id="email" name="email" placeholder="exemple@exemple.com" required>
               </div>
               <div class="form-group">
-                <label for="phone">Votre numéro de téléphonne/label></label>
+                <label for="phone">Votre numéro de téléphonne</label>
                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="0X XX XX XX XX" required>
               </div>
               <div class="form-group">
                 <label for="deposit">Depôt d'argent (Minimum 50 euro)</label>
                 <input type="number" class="form-control" id="deposit" name="deposit" value="50" min="50" required>
               </div>
-              <button type="submit" class="btn btn-primary mb-2">Valider</button>
+              <button type="submit" class="btn btn-primary mb-2" onclick="userAccountForm.newUser()">Valider</button>
             </form>
         </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <ul id="userAccount" class="list-group list-group-flush">
+        <li id="accountInput" class="list-group-item"></li>
+        <li id="lastNameInput" class="list-group-item"></li>
+        <li id="emailInput" class="list-group-item"></li>
+        <li id="phoneInput" class="list-group-item"></li>
+        <li id="depositInput" class="list-group-item"></li>
+      </ul>
     </div>
   </main>
   <footer>

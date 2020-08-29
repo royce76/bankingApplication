@@ -11,7 +11,7 @@ httpRequest.onreadystatechange = blog;
 httpRequest.open('GET', 'https://oc-jswebsrv.herokuapp.com/api/articles', true);
 httpRequest.send();
 
-//launch bourseInformation
+//launch blog Information
 function blog() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {      
         if (httpRequest.status === 200) {

@@ -35,10 +35,10 @@
           <a class="nav-link" href="blog.html">Blog</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="compteDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Compte
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="compteDropDown">
             <a class="dropdown-item" href="currentAccount.html">Compte courant</a>
             <a class="dropdown-item" href="livretA.html">Livret A</a>
             <a class="dropdown-item" href="pel.html">PEL</a>
@@ -51,10 +51,10 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="mouvementDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Mouvement
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="mouvementDropDown">
             <a class="dropdown-item" href="deposit.html">Depôt</a>
             <a class="dropdown-item" href="withdraw.html">Retraît</a>
             <a class="dropdown-item" href="transfer.html">Virement</a>
@@ -103,16 +103,25 @@
                 <input type="email" class="form-control" id="email" name="email" placeholder="exemple@exemple.com" required>
               </div>
               <div class="form-group">
-                <label for="phone">Votre numéro de téléphonne/label></label>
+                <label for="phone">Votre numéro de téléphonne</label>
                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="0X XX XX XX XX" required>
               </div>
               <div class="form-group">
                 <label for="deposit">Depôt d'argent (Minimum 50 euro)</label>
                 <input type="number" class="form-control" id="deposit" name="deposit" value="50" min="50" required>
               </div>
-              <button type="submit" class="btn btn-primary mb-2">Valider</button>
+              <button type="submit" class="btn btn-primary mb-2" onclick="userAccountForm.newUser()">Valider</button>
             </form>
         </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <ul id="userAccount" class="list-group list-group-flush">
+        <li id="accountInput" class="list-group-item"></li>
+        <li id="lastNameInput" class="list-group-item"></li>
+        <li id="emailInput" class="list-group-item"></li>
+        <li id="phoneInput" class="list-group-item"></li>
+        <li id="depositInput" class="list-group-item"></li>
+      </ul>
     </div>
   </main>
   <footer>

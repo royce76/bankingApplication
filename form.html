@@ -10,12 +10,13 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
 
-  <!--link bootstrap4-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <!--link own css-->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-
+ 
+  <!--link bootstrap4-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+ 
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -63,35 +64,44 @@
     <a class="btn btn-primary btn-lg" href="form.html" role="button">Créer un compte</a>
   </header>
   <main>
-    <!--loading figure-->
-    <div class="spinner-border" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <!--3 cards to show datas of bank informations-->
-    <div class="container marginAuto">
-      <div class="row">
-        <article class="card col-12 my-4" style="width: 18rem;">
-          <h3 class="card-header">
-            Taux Emprunts
-          </h3>
-          <ul id="taux" class="list-group list-group-flush">
-          </ul>
-        </article>
-        <article class="card col-12 my-4" style="width: 18rem;">
-          <h3 class="card-header">
-            Cours de la Bourse
-          </h3>
-          <ul id="coursDeLaBourse" class="list-group list-group-flush">
-          </ul>
-        </article>
-        <article class="card col-12 my-4" style="width: 18rem;">
-          <h3 class="card-header">
-            Cours de la monnaie
-          </h3>
-          <ul id ="CoursDeLaMonnaie" class="list-group list-group-flush">
-          </ul>
-        </article>
-      </div>
+    <div class="container">
+        <div class="row">
+            <form action="#" method="post" class="col-11">
+                <div class="form-group">
+                  <label for="compte">Type de compte</label>
+                  <select class="form-control" id="compte" name="compte">
+                    <option value="">--Choisissez un type de compte--</option>
+                    <option value="courant">Compte courant</option>
+                    <option value="livretA">LivretA</option>
+                    <option value="PEL">PEL</option>
+                    <option value="livretJeune">Livret Jeune</option>
+                    <option value="Perp">PERP (retraite)</option>
+                    <option value="Perp">LEP (populaire)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Entrez votre nom</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Votre nom..." required>
+                  </div>
+                  <div class="form-group">
+                    <label for="firstName">Entrez votre prénom</label>
+                    <input type="name" class="form-control" id="firstName" name="firstName" placeholder="Votre prénom..." required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Adresse E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="exemple@exemple.com" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Votre numéro de téléphonne/label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="0X XX XX XX XX" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="deposit">Depôt d'argent (Minimum 50 euro)</label>
+                    <input type="number" class="form-control" id="deposit" name="deposit" value="50" min="50" required>
+                  </div>
+                <button type="submit" class="btn btn-primary mb-2">Valider</button>
+              </form>
+        </div>
     </div>
   </main>
   <footer>
@@ -107,7 +117,7 @@
       </li>
     </ul>
   </footer>
-
+  
   <!--sccript bootstrap4-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -115,7 +125,7 @@
   <!--script boilerplate-->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/statistical.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

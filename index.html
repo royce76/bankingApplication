@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Banque Normandie</title>
-  <meta name="description" content="Application bancaire qui permet d'afficher ses comptes.">
+  <meta name="description" content="Application bancaire avec ouverture de compte.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="manifest" href="site.webmanifest">
@@ -22,7 +22,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="index.html">Accueil</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,36 +36,37 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+            Compte
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Compte courant</a>
+            <a class="dropdown-item" href="#">Livret A</a>
+            <a class="dropdown-item" href="#">PEL</a>
+            <a class="dropdown-item" href="#">Livret Jeune</a>
+            <a class="dropdown-item" href="#">PERP</a>
+            <a class="dropdown-item" href="#">LEP</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Créer un compte</a>
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Recherche..." aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
       </form>
     </div>
   </nav>
   <header class="jumbotron">
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <h1 class="display-4">BANQUE NORMANDIE</h1>
+    <p class="lead">Bienvenue sur BANQUE NORMANDIE, une banque à votre écoute.</p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <p>Vous pouvez créer un compte bancaire à tout moment.</p>
+    <a class="btn btn-primary btn-lg" href="form.html" role="button">Créer un compte</a>
   </header>
   <main>
-    <div class="container marginAuto">
+    <div class="container m-3">
       <div class="row">
-        <article class="card col-12 col-md-5 col-lg-3" style="width: 18rem;">
+        <article class="card col-11 col-md-5 col-lg-3 my-3" style="width: 18rem;">
           <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -73,7 +74,7 @@
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </article>
-        <article class="card col-12 col-md-5 offset-md-1 col-lg-3 offset-lg-1" style="width: 18rem;">
+        <article class="card col-11 col-md-5 offset-md-1 col-lg-3 offset-lg-1 my-3" style="width: 18rem;">
           <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -81,7 +82,7 @@
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </article>
-        <article class="card col-12 col-md-5 col-lg-3 offset-lg-1" style="width: 18rem;">
+        <article class="card col-11 col-md-5 col-lg-3 offset-lg-1 my-3" style="width: 18rem;">
           <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -89,7 +90,7 @@
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </article>
-        <article class="card col-12 col-md-5 offset-md-1 col-lg-3 offset-lg-0" style="width: 18rem;">
+        <article class="card col-11 col-md-5 offset-md-1 col-lg-3 offset-lg-0 my-3" style="width: 18rem;">
           <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -97,7 +98,7 @@
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </article>
-        <article class="card col-12 col-md-5 col-lg-3 offset-lg-1" style="width: 18rem;">
+        <article class="card col-11 col-md-5 col-lg-3 offset-lg-1 my-3" style="width: 18rem;">
           <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -105,7 +106,7 @@
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </article>
-        <article class="card col-12 col-md-5 offset-md-1 col-lg-3 offset-lg-1" style="width: 18rem;">
+        <article class="card col-11 col-md-5 offset-md-1 col-lg-3 offset-lg-1 my-3" style="width: 18rem;">
           <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -118,17 +119,14 @@
   </main>
   <footer>
     <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+      <li class="nav-item ">
+        <a class="nav-link active" href="index.html">Accueil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link active" href="doc/adresse.txt">Adresse</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link" href="doc/mention_Légale.txt">Mention Légale</a>
       </li>
     </ul>
   </footer>

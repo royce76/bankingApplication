@@ -89,6 +89,7 @@ textarea {
 
    /*GENERAL RULES*/
 
+  
    /*layer*/
 
    #divLayer {
@@ -118,11 +119,6 @@ textarea {
    }
 
    /*UTILITY CLASSES*/
-
-   .marginAuto {
-     width : 90%;
-     margin : auto;
-   }
    
    /*RESPONSIVE*/
 

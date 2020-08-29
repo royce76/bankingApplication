@@ -89,10 +89,7 @@ textarea {
 
    /*GENERAL RULES*/
 
-   #footer {
-     height: 20vh;
-     background-color: red;
-   }
+  
    /*layer*/
 
    #divLayer {
@@ -122,11 +119,6 @@ textarea {
    }
 
    /*UTILITY CLASSES*/
-
-   .marginAuto {
-     width : 90%;
-     margin : auto;
-   }
    
    /*RESPONSIVE*/
 

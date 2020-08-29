@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Banque Normandie</title>
-  <meta name="description" content="Application bancaire avec ouverture de compte.">
+  <meta name="description" content="Application bancaire qui permet d'afficher ses comptes.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="manifest" href="site.webmanifest">
@@ -76,56 +76,39 @@
   </header>
   <main>
     <div class="container">
-      <div class="row">
-        <article class="card col-11 col-md-5 col-lg-3 my-3" style="width: 18rem;">
-          <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
-          <div class="card-body">
-            <h5 class="card-title">Compte courant</h5>
-            <p class="card-text">Bonne santé</p>
-            <a href="currentAccount.html" class="btn bg-primary">Voir mon compte</a>
-          </div>
-        </article>
-        <article class="card col-11 col-md-5 offset-md-2 col-lg-3 offset-lg-1 my-3" style="width: 18rem;">
-          <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
-          <div class="card-body">
-            <h5 class="card-title">Livret A</h5>
-            <p class="card-text">Bonne santé</p>
-            <a href="livretA.html" class="btn bg-primary">Voir mon compte</a>
-          </div>
-        </article>
-        <article class="card col-11 col-md-5 col-lg-3 offset-lg-1 my-3" style="width: 18rem;">
-          <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
-          <div class="card-body">
-            <h5 class="card-title">PEL</h5>
-            <p class="card-text">Bonne santé</p>
-            <a href="pel.html" class="btn bg-primary">Voir mon compte</a>
-          </div>
-        </article>
-        <article class="card col-11 col-md-5 offset-md-2 col-lg-3 offset-lg-0 my-3" style="width: 18rem;">
-          <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
-          <div class="card-body">
-            <h5 class="card-title">Livret jeune</h5>
-            <p class="card-text">Bonne santé</p>
-            <a href="livretJeune.html" class="btn bg-primary">Voir mon compte</a>
-          </div>
-        </article>
-        <article class="card col-11 col-md-5 col-lg-3 offset-lg-1 my-3" style="width: 18rem;">
-          <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
-          <div class="card-body">
-            <h5 class="card-title">PERP</h5>
-            <p class="card-text">Bonne santé</p>
-            <a href="perp.html" class="btn bg-primary">Voir mon compte</a>
-          </div>
-        </article>
-        <article class="card col-11 col-md-5 offset-md-2 col-lg-3 offset-lg-1 my-3" style="width: 18rem;">
-          <img src="img/bank.jpg" class="card-img-top" alt="tirelire">
-          <div class="card-body">
-            <h5 class="card-title">LEP</h5>
-            <p class="card-text">Bonne santé</p>
-            <a href="lep.html" class="btn bg-primary">Voir mon compte</a>
-          </div>
-        </article>
-      </div>
+        <div class="row">
+            <form action="#" method="post" class="col-11">
+              <div class="form-group">
+                <label for="compteExpediteur">Votre compte expediteur</label>
+                <select class="form-control" id="compteExpediteur" name="compteExpediteur">
+                  <option value="">--Choisissez votre de compte--</option>
+                  <option value="courant">Compte courant</option>
+                  <option value="livretA">LivretA</option>
+                  <option value="PEL">PEL</option>
+                  <option value="livretJeune">Livret Jeune</option>
+                  <option value="Perp">PERP (retraite)</option>
+                  <option value="Perp">LEP (populaire)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="compteDestinataire">Votre compte destinataire</label>
+                <select class="form-control" id="compteDestinataire" name="compteDestinataire">
+                  <option value="">--Choisissez votre de compte--</option>
+                  <option value="courant">Compte courant</option>
+                  <option value="livretA">LivretA</option>
+                  <option value="PEL">PEL</option>
+                  <option value="livretJeune">Livret Jeune</option>
+                  <option value="Perp">PERP (retraite)</option>
+                  <option value="Perp">LEP (populaire)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="transfert">Virement (Minimum 20 euro)</label>
+                <input type="number" class="form-control" id="transfert" name="transfert" value="20" min="20" required>
+              </div>
+              <button type="submit" class="btn btn-primary mb-2">Valider</button>
+            </form>
+        </div>
     </div>
   </main>
   <footer>
@@ -141,20 +124,7 @@
       </li>
     </ul>
   </footer>
-    <div id="divLayer">
-      <div id="layer" class="card bg-dark text-white">
-        <img id="imgLayer" src="img/layer.jpg" class="card-img" alt="security">
-        <article class="card-img-overlay">
-          <h5 class="card-title">Sécurité</h5>
-          <p id="messageSecurity" class="card-text"></p>
-          <button id="buttonLayer" type="button" class="btn btn-info">Accepter</button>
-        </article>
-      </div>
-    </div>
-  <div class="spinner-border" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
-
+  
   <!--sccript bootstrap4-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -162,7 +132,7 @@
   <!--script boilerplate-->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/transfer.js"></script>
 </body>
 
 </html>

@@ -39,14 +39,25 @@
             Compte
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Compte courant</a>
-            <a class="dropdown-item" href="#">Livret A</a>
-            <a class="dropdown-item" href="#">PEL</a>
-            <a class="dropdown-item" href="#">Livret Jeune</a>
-            <a class="dropdown-item" href="#">PERP</a>
-            <a class="dropdown-item" href="#">LEP</a>
+            <a class="dropdown-item" href="currentAccount.html">Compte courant</a>
+            <a class="dropdown-item" href="livretA.html">Livret A</a>
+            <a class="dropdown-item" href="pel.html">PEL</a>
+            <a class="dropdown-item" href="livretJeune.html">Livret Jeune</a>
+            <a class="dropdown-item" href="perp.html">PERP</a>
+            <a class="dropdown-item" href="lep.html">LEP</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Créer un compte</a>
+            <a class="dropdown-item" href="form.html">Créer un compte</a>
+            <a class="dropdown-item" href="delete.html">Supprimer un compte</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mouvement
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="deposit.html">Depôt</a>
+            <a class="dropdown-item" href="withdraw.html">Retraît</a>
+            <a class="dropdown-item" href="transfer.html">Virement</a>
           </div>
         </li>
       </ul>
@@ -67,40 +78,40 @@
     <div class="container">
         <div class="row">
             <form action="#" method="post" class="col-11">
-                <div class="form-group">
-                  <label for="compte">Type de compte</label>
-                  <select class="form-control" id="compte" name="compte">
-                    <option value="">--Choisissez un type de compte--</option>
-                    <option value="courant">Compte courant</option>
-                    <option value="livretA">LivretA</option>
-                    <option value="PEL">PEL</option>
-                    <option value="livretJeune">Livret Jeune</option>
-                    <option value="Perp">PERP (retraite)</option>
-                    <option value="Perp">LEP (populaire)</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Entrez votre nom</label>
-                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Votre nom..." required>
-                  </div>
-                  <div class="form-group">
-                    <label for="firstName">Entrez votre prénom</label>
-                    <input type="name" class="form-control" id="firstName" name="firstName" placeholder="Votre prénom..." required>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Adresse E-mail</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="exemple@exemple.com" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="phone">Votre numéro de téléphonne/label>
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="0X XX XX XX XX" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="deposit">Depôt d'argent (Minimum 50 euro)</label>
-                    <input type="number" class="form-control" id="deposit" name="deposit" value="50" min="50" required>
-                  </div>
-                <button type="submit" class="btn btn-primary mb-2">Valider</button>
-              </form>
+              <div class="form-group">
+                <label for="compte">Type de compte</label>
+                <select class="form-control" id="compte" name="compte">
+                  <option value="">--Choisissez un type de compte--</option>
+                  <option value="courant">Compte courant</option>
+                  <option value="livretA">LivretA</option>
+                  <option value="PEL">PEL</option>
+                  <option value="livretJeune">Livret Jeune</option>
+                  <option value="Perp">PERP (retraite)</option>
+                  <option value="Perp">LEP (populaire)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Entrez votre nom</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Votre nom..." required>
+              </div>
+              <div class="form-group">
+                <label for="firstName">Entrez votre prénom</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Votre prénom..." required>
+              </div>
+              <div class="form-group">
+                <label for="email">Adresse E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="exemple@exemple.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Votre numéro de téléphonne/label></label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="0X XX XX XX XX" required>
+              </div>
+              <div class="form-group">
+                <label for="deposit">Depôt d'argent (Minimum 50 euro)</label>
+                <input type="number" class="form-control" id="deposit" name="deposit" value="50" min="50" required>
+              </div>
+              <button type="submit" class="btn btn-primary mb-2">Valider</button>
+            </form>
         </div>
     </div>
   </main>

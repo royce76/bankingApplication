@@ -12,7 +12,7 @@
 >
 >> - ## TO view the website:
 >
->> Go on the link [Banque Normandie](https://royce76.github.io/bankingApplication/index.html).
+>> Go to the link [Banque Normandie](https://royce76.github.io/bankingApplication/index.html).
 >
 >> - ## COMMITS
 >

@@ -1,4 +1,3 @@
-//class d'instance creates the account object from the form
 class account {
     constructor(bankAccount, lastname, firstname, email, phone,depositAccount) {
         this.bankAccount =  bankAccount;
@@ -8,7 +7,6 @@ class account {
         this.phone = phone;
         this.depositAccount = depositAccount;
     }
-    //method instance
     showAccount() {
         document.getElementById('accountInput').innerText = "Compte de type " + this.bankAccount;
         document.getElementById('lastNameInput').innerText = "Au nom de " + this.lastname + ' ' + this.firstname;
@@ -18,26 +16,14 @@ class account {
     }
 }
 
-// on crée un objet qui récupère les value des input
-let userAccountForm = {
-    // on récupère les valeur des inputs
-    dataFormHandling: function() {
-        this.bankAccountInput =  document.getElementById("compte").value;
-        this.lastnameInput = document.getElementById("lastName").value;
-        this.firstnameInput = document.getElementById("firstName").value;
-        this.emailInput = document.getElementById("email").value;
-        this.phoneInput = document.getElementById("phone").value;
-        this.depositAccountInput = document.getElementById("deposit").value;
-    },
-    //on instancie les valeurs des inputs dans account et on les affiche via showAccount
-    newUser: function() {
-      this.dataFormHandling();
-      let newUserAccount = new account(this.bankAccountInput, this.lastnameInput, this.firstnameInput, this.emailInput, this.phoneInput, this.depositAccountInput );
-      newUserAccount.showAccount();
-    }
-  };
-  
-
-let userExemple = new account("PEL", "george", "royce", "exemple@exemple.com", 1, 50);
-userExemple.showAccount();
-
+let button = document.getElementById("buttonNewAccount");
+button.addEventListener("click", function() {
+    let bankAccountInput =  document.getElementById("compte").value;
+    let lastnameInput = document.getElementById("lastName").value;
+    let firstnameInput = document.getElementById("firstName").value;
+    let emailInput = document.getElementById("email").value;
+    let phoneInput = document.getElementById("phone").value;
+    let depositAccountInput = document.getElementById("deposit").value;
+    let newUserAccount = new account(bankAccountInput, lastnameInput, firstnameInput, emailInput, phoneInput, depositAccountInput);
+    newUserAccount.showAccount();
+});

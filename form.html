@@ -75,6 +75,15 @@
     <a class="btn btn-primary btn-lg" href="form.html" role="button">Créer un compte</a>
   </header>
   <main>
+    <div class="card" style="width: 18rem;">
+      <ul id="userAccount" class="list-group list-group-flush">
+        <li id="accountInput" class="list-group-item"></li>
+        <li id="lastNameInput" class="list-group-item"></li>
+        <li id="emailInput" class="list-group-item"></li>
+        <li id="phoneInput" class="list-group-item"></li>
+        <li id="depositInput" class="list-group-item"></li>
+      </ul>
+    </div>
     <div class="container">
         <div class="row">
             <form action="#" method="post" class="col-11">
@@ -110,18 +119,9 @@
                 <label for="deposit">Depôt d'argent (Minimum 50 euro)</label>
                 <input type="number" class="form-control" id="deposit" name="deposit" value="50" min="50" required>
               </div>
-              <button type="submit" class="btn btn-primary mb-2" onclick="userAccountForm.newUser()">Valider</button>
+              <button id="buttonNewAccount" type="submit" class="btn btn-primary mb-2">Valider</button>
             </form>
         </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <ul id="userAccount" class="list-group list-group-flush">
-        <li id="accountInput" class="list-group-item"></li>
-        <li id="lastNameInput" class="list-group-item"></li>
-        <li id="emailInput" class="list-group-item"></li>
-        <li id="phoneInput" class="list-group-item"></li>
-        <li id="depositInput" class="list-group-item"></li>
-      </ul>
     </div>
   </main>
   <footer>

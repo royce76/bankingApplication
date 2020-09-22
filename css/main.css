@@ -89,7 +89,7 @@ textarea {
 
    /*GENERAL RULES*/
 
-  
+
    /*layer*/
 
    #divLayer {
@@ -119,7 +119,7 @@ textarea {
    }
 
    /*UTILITY CLASSES*/
-   
+
    /*RESPONSIVE*/
 
    @media screen and (min-width : 768px) {
@@ -312,4 +312,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-

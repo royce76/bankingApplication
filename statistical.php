@@ -35,6 +35,7 @@ include "template/header.php";
     </article>
   </div>
 </div>
+
 <?php
 include "template/footer.php";
 ?>

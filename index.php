@@ -1,6 +1,8 @@
+<?php
+  include "template/nav.php";
+  include "template/header.php";
+ ?>
 
-
-
-  <main>
-    <p>coucou</p>
-  </main>
+<?php
+  include "template/footer.php";
+ ?>

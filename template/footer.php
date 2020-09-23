@@ -32,10 +32,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <!--script boilerplate-->
+    <script src="js/main.js"></script>
+    <script src="js/statistical.js"></script>
+    <script src="js/blog.js"></script>
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/blog.js"></script>
     <script src="js/currentAccount.js"></script>
     <script src="js/delete.js"></script>
     <script src="js/deposit.js"></script>
@@ -45,7 +46,6 @@
     <script src="js/livretJeune.js"></script>
     <script src="js/pel.js"></script>
     <script src="js/perp.js"></script>
-    <script src="js/statistical.js"></script>
     <script src="js/transfer.js"></script>
     <script src="js/withdraw.js"></script>
   </body>

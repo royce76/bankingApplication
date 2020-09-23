@@ -13,10 +13,10 @@ httpRequest.send();
 
 //launch bourseInformation
 function bourseInformation() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {      
+    if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
             loading.classList.add("d-none");
-            let bourse = JSON.parse(httpRequest.response)
+            let bourse = JSON.parse(httpRequest.response);
             show(bourse);
         } else {
             console.log("en attente");
@@ -34,17 +34,17 @@ function show(data) {
                 document.getElementById("taux").appendChild(emprunt);
                 emprunt.classList.add("list-group-item");
                 emprunt.innerText = prop + ' = ' + data[preciseData][prop] + '.';
-                emprunt.style.textAlign = "center";    
-            } 
+                emprunt.style.textAlign = "center";
+            }
         }
         else if(preciseData === "Cours de la Bourse") {
             for(let prop in data[preciseData]) {
                 let bourseData = document.createElement("li");
                 document.getElementById("coursDeLaBourse").appendChild(bourseData);
                 bourseData.classList.add("list-group-item");
-                bourseData.innerText = prop + ' = (' + data[preciseData][prop][0] + ', ' + data[preciseData][prop][1] +').' ;    
+                bourseData.innerText = prop + ' = (' + data[preciseData][prop][0] + ', ' + data[preciseData][prop][1] +').' ;
                 bourseData.style.textAlign = "center";
-            } 
+            }
         }
         if(preciseData === "Cours de la monnaie") {
             for(let prop in data[preciseData]) {
@@ -52,8 +52,8 @@ function show(data) {
                 document.getElementById("CoursDeLaMonnaie").appendChild(monnaie);
                 monnaie.classList.add("list-group-item");
                 monnaie.innerText = prop + ' = ' + data[preciseData][prop] + '.';
-                monnaie.style.textAlign = "center";    
-            } 
-        } 
+                monnaie.style.textAlign = "center";
+            }
+        }
     }
 }

@@ -34,6 +34,11 @@
         }
       ?>
     </ul>
+    <div class="card-body mx-auto">
+      <a href="showaccount.php?<?php foreach ($accounts[$i] as $keyss => $parameter): ?><?php echo "$keyss=$parameter&amp;"; ?><?php endforeach; ?>
+      " class="btn btn-primary">Voir mon compte
+      </a>
+    </div>
   </div>
 
 <?php

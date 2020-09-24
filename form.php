@@ -51,6 +51,7 @@
    </div>
    <button id="buttonNewAccount" type="submit" class="btn btn-primary mb-2">Valider</button>
  </div>
+ <script src="js/form.js"></script>
  <?php
  include "template/footer.php";
  ?>

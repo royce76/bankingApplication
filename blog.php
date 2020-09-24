@@ -47,6 +47,7 @@ include "template/header.php";
     </article>
   </div>
 </div>
+<script src="js/blog.js"></script>
 <?php
 include "template/footer.php";
 ?>

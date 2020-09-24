@@ -35,7 +35,7 @@ include "template/header.php";
     </article>
   </div>
 </div>
-
+<script src="js/statistical.js"></script>
 <?php
 include "template/footer.php";
 ?>

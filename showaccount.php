@@ -1,6 +1,4 @@
 <?php
-  include "data/acounts.php";
-  $accounts = get_accounts();
   $array_of_key = ["name", "number", "owner", "amount", "last_operation"];
   $array_of_parameter = [];
   for ($i=0; $i < sizeof($array_of_key) ; $i++) {

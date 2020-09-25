@@ -16,23 +16,19 @@
   <div class="card col-10 offset-1 my-4" style="width: 18rem;">
     <!-- for each key called name we put them in the head of the card -->
     <div class="card-header text-center">
-      <?php
-        foreach ($accounts[$i] as $key => $value) {
-          if ($key === "name") {
-            echo $value;
-          }
-        }
-      ?>
+      <?php foreach ($accounts[$i] as $key => $value): ?>
+        <?php if ($key === "name") : ?>
+          <?php echo $value ?>
+        <?php endif; ?>
+      <?php endforeach; ?>
     </div>
     <ul class="list-group list-group-flush">
       <!--attention for the li it is necessary to pass them in echo so that it is added to the card-->
-      <?php
-        foreach ($accounts[$i] as $keys => $values) {
-          if ($keys !== "name") {
-            echo '<li class="list-group-item text-center">'.$keys.' : '.$values.'</li>';
-          }
-        }
-      ?>
+      <?php foreach ($accounts[$i] as $keys => $values): ?>
+        <?php if ($keys !== "name") : ?>
+          <?php echo '<li class="list-group-item text-center">'.$keys.' : '.$values.'</li>' ?>
+        <?php endif; ?>
+      <?php endforeach; ?>
     </ul>
     <div class="card-body mx-auto">
       <a href="showaccount.php?<?php foreach ($accounts[$i] as $keyss => $parameter): ?><?php echo "$keyss=$parameter&amp;"; ?><?php endforeach; ?>
@@ -41,9 +37,7 @@
     </div>
   </div>
 
-<?php
-  endfor;
-?>
+<?php endfor; ?>
   </div>
 </section>
 <!-- <div class="spinner-border" role="status">

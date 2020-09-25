@@ -76,7 +76,7 @@
         </ul>
         <form action="#" method="post" class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="email" id="email" aria-describedby="emailHelp" name="email" placeholder="Votre E-mail...">
-          <input class="form-control mr-sm-2" type="text" id="password" name="password" placeholder="Votre mot de passe...">
+          <input class="form-control mr-sm-2" type="password" id="password" name="password" placeholder="Votre mot de passe...">
           <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Connexion</button>
         </form>
       </div>

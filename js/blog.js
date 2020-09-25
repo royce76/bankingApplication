@@ -13,27 +13,37 @@ httpRequest.send();
 
 //launch blog Information
 function blog() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {      
+    if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
             loading.classList.add("d-none");
             let blog = JSON.parse(httpRequest.response)
             showBlog(blog);
         } else {
-            console.log("en attente");
+            console.log("Oups !!! Données non reçu");
         }
     } else {
         console.log("en attente");
     }
 }
- 
+
 function showBlog(dataBlog) {
-    for(let i=0; i < dataBlog.length; i++) {
-        for(let prop in dataBlog[i]) {
-            let articleListe = document.createElement("li");
-            document.querySelectorAll(".list-group")[i].appendChild(articleListe);
-            articleListe.classList.add("list-group-item");
-            articleListe.innerText = prop + ' = ' + dataBlog[i][prop];
-            articleListe.style.textAlign = "center";
-        }
+  for(let i=0; i < dataBlog.length; i++) {
+    let article = document.createElement("article");
+    document.getElementById('cardBlog').appendChild(article);
+    article.classList.add("card", "col-10", "mx-auto", "col-md-5", "my-4");
+    article.style.width = "18rem";
+    let title = document.createElement("h3");
+    title.classList.add("card-header", "text-center");
+    article.appendChild(title);
+    title.innerText = i;
+    let ul = document.createElement("ul");
+    article.appendChild(ul);
+    ul.classList.add("list-group", "list-group-flush");
+    for (let prop in dataBlog[i]) {
+      let li = document.createElement("li");
+      ul.appendChild(li);
+      li.classList.add("list-group-item", "text-center");
+      li.innerText = prop + " :\n " + dataBlog[i][prop] ;
     }
+  }
 }

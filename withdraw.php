@@ -1,10 +1,7 @@
-
 <?php
 include "template/nav.php";
 include "template/header.php";
 ?>
-
-
 
 <div class="container">
   <div class="row">
@@ -29,6 +26,7 @@ include "template/header.php";
     </form>
   </div>
 </div>
+
 <?php
 include "template/footer.php";
 ?>

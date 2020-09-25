@@ -3,24 +3,17 @@
   $name_of_form = ["compte", "lastName", "firstName", "email", "phone", "deposit"];
   //this one is created to link the user choice in the form
   $array_label = ["Choix du compte", "Votre nom", "Votre prénom", "Votre E-mail", "Votre n° de tél", "Votre premier dépôt"];
-  $names = "";
   //we stock choice user values from form in this array
   $array_of_choice_user = [];
   foreach ($name_of_form as $name) :
 ?>
-
-<?php
-  if (!empty($_POST[$name]) && isset($_POST[$name])):
-  $names = htmlspecialchars($_POST[$name], ENT_QUOTES);
-  array_push($array_of_choice_user, $names);
-?>
-<?php endif; ?>
+  <?php
+    if (!empty($_POST[$name]) && isset($_POST[$name])):
+    $names = htmlspecialchars($_POST[$name], ENT_QUOTES);
+    array_push($array_of_choice_user, $names);
+  ?>
+  <?php endif; ?>
 <?php endforeach; ?>
-
-<!-- $info_user is an array from $array_label and $array_of_choice_user -->
-<?php if (sizeof($array_of_choice_user) === sizeof($array_label)): ?>
-  <?php $info_user = array_combine($array_label,$array_of_choice_user); ?>
-<?php endif; ?>
 
 <?php
   include "template/nav.php";
@@ -67,27 +60,31 @@
    </div>
  </div>
 
-<!--to be sure that the informations appears if every inputs are not empty-->
-<?php if ($names !== ""): ?>
-  <section class="container">
-    <h2 class="text-center">Vos informations</h2>
-    <div class="row">
-      <div class="card col-10 offset-1" style="width: 18rem;">
-        <?php foreach ($info_user as $key => $value): ?>
-          <?php if ($value === $array_of_choice_user[0]): ?>
-            <?php echo '<div class="card-header text-center">'.$key.' : '.$value.'</div>' ?>
+ <!-- $info_user is an array from $array_label and $array_of_choice_user -->
+<?php
+ if (sizeof($array_of_choice_user) === sizeof($array_label)):
+ $info_user = array_combine($array_label,$array_of_choice_user);
+?>
+<section class="container">
+  <h2 class="text-center">Vos informations</h2>
+  <div class="row">
+    <div class="card col-10 offset-1" style="width: 18rem;">
+      <?php foreach ($info_user as $key => $value): ?>
+        <?php if ($value === $array_of_choice_user[0]): ?>
+          <?php echo '<div class="card-header text-center">'.$key.' : '.$value.'</div>' ?>
+        <?php endif; ?>
+      <?php endforeach; ?>
+      <ul class="list-group list-group-flush">
+        <?php foreach ($info_user as $keys => $values): ?>
+          <?php if ($values !== $array_of_choice_user[0]): ?>
+            <?php echo '<li class="list-group-item text-center">'.$keys.' : '.$values.'</li>'; ?>
           <?php endif; ?>
         <?php endforeach; ?>
-        <ul class="list-group list-group-flush">
-          <?php foreach ($info_user as $keys => $values): ?>
-            <?php if ($values !== $array_of_choice_user[0]): ?>
-              <?php echo '<li class="list-group-item text-center">'.$keys.' : '.$values.'</li>'; ?>
-            <?php endif; ?>
-          <?php endforeach; ?>
-        </ul>
-      </div>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
+
 <?php endif; ?>
 
 <?php

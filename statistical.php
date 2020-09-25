@@ -1,9 +1,7 @@
-
 <?php
 include "template/nav.php";
 include "template/header.php";
 ?>
-
 
 <!--loading figure-->
 <div class="spinner-border" role="status">

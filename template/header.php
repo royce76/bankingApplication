@@ -6,4 +6,4 @@
     <p>Vous pouvez créer un compte bancaire à tout moment.</p>
     <a class="btn btn-primary btn-lg" href="form.php" role="button">Créer un compte</a>
   </header>
-  <main>
+  <main id="main">

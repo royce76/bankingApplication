@@ -12,20 +12,20 @@
  ?>
 
 <?php if (sizeof($array_of_key) === sizeof($array_of_parameter)): ?>
-  <section class="container">
+  <section class="container my-4">
+    <h2 class="text-center my-4">Votre<?php echo ' '.$array_of_parameter[0]; ?></h2>
     <div class="row">
-      <h2 class="mx-auto">Votre<?php echo ' '.$array_of_parameter[0]; ?></h2>
-      <div class="card col-10 offset-1" style="width: 18rem;">
-        <div class="card-header text-center">
+      <div id="cardShowAccount" class="card col-10 col-md-8 col-lg-6 mx-auto" style="width: 18rem;">
+        <div class="card-header col-10 mx-auto">
           <?php echo $array_of_key[0].' : '.$array_of_parameter[0]; ?>
         </div>
         <ul class="list-group list-group-flush">
           <?php for ($i=1; $i < sizeof($array_of_parameter) ; $i++): ?>
-            <?php echo '<li class="list-group-item text-center">'.$array_of_key[$i].' : '.$array_of_parameter[$i].'</li>'; ?>
+            <?php echo '<li class="list-group-item col-10 mx-auto">'.$array_of_key[$i].' : '.$array_of_parameter[$i].'</li>'; ?>
           <?php endfor; ?>
         </ul>
         <div class="card-body mx-auto">
-          <a href="index.php" class="btn btn-primary">Retour accueil</a>
+          <a href="index.php" id="buttonShowAccount" class="btn btn-primary">Retour accueil</a>
         </div>
       </div>
     </div>

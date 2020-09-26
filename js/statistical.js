@@ -42,7 +42,7 @@ function show(data) {
       for (let values in data[preciseData]) {
         let li = document.createElement("li");
         ul.appendChild(li);
-        li.classList.add("list-group-item", "text-center");
+        li.classList.add("list-group-item",  "col-10", "mx-auto");
         li.innerText = values + " : " + data[preciseData][values] ;
       }
   }

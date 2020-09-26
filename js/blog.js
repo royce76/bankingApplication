@@ -42,8 +42,8 @@ function showBlog(dataBlog) {
     for (let prop in dataBlog[i]) {
       let li = document.createElement("li");
       ul.appendChild(li);
-      li.classList.add("list-group-item", "text-center");
-      li.innerText = prop + " :\n " + dataBlog[i][prop] ;
+      li.classList.add("list-group-item",  "col-10", "mx-auto");
+      li.innerText = prop + " : " + dataBlog[i][prop] ;
     }
   }
 }

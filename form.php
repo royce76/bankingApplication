@@ -32,7 +32,7 @@
            <option value="PEL">PEL</option>
            <option value="Livret Jeune">Livret Jeune</option>
            <option value="Perp">PERP (retraite)</option>
-           <option value="Perp">LEP (populaire)</option>
+           <option value="Lep">LEP (populaire)</option>
          </select>
        </div>
        <div class="form-group">
@@ -60,11 +60,28 @@
    </div>
  </div>
 
+ <!-- test if the $_POST[$name] for account is correct -->
+ <?php
+ $accounts_name = ["Compte courant", "Livret A", "PEL", "Livret Jeune", "Perp", "Lep"];
+ if (sizeof(array_intersect($accounts_name, $array_of_choice_user)) !== 1):
+ ?>
+   <?php echo "oups" ?>
+ <?php else: ?>
+   <?php echo "okay" ?>
+ <?php endif; ?>
+
  <!-- $info_user is an array from $array_label and $array_of_choice_user -->
 <?php
  if (sizeof($array_of_choice_user) === sizeof($array_label)):
  $info_user = array_combine($array_label,$array_of_choice_user);
 ?>
+
+<?php if ($info_user["Votre premier dépôt"] < 50): ?>
+  <?php echo "oups" ?>
+<?php else: ?>
+  <?php echo "okay" ?>
+<?php endif; ?>
+
 <section class="container">
   <h2 class="text-center">Vos informations</h2>
   <div class="row">

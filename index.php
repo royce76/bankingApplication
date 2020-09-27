@@ -45,7 +45,8 @@
     </div>
   </section>
 <?php
-  else: echo '<p class="text-center">Regardez en haut de la page à droite pour vous connecter et afficher vos comptes</p>';
+  else:
+  echo '<p class="text-center">Regardez en haut de la page à droite pour vous connecter et afficher vos comptes</p>';
 ?>
 <?php
   endif;

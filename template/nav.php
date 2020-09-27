@@ -3,15 +3,34 @@
   $connexion = get_password();
   $connexion_name = ["email","password"];
   $ID = [];
-  foreach ($connexion_name as $names):
+  function test_input($data) {
+    $data = trim($data); // remove space of both side
+    $data = stripslashes($data);// remove backslashes
+    $data = htmlspecialchars($data, ENT_QUOTES);//both quotes
+    return $data;
+  }
+?>
+
+<?php
+  $error = "";
+  if ($_SERVER["REQUEST_METHOD"] == "POST"):
 ?>
   <?php
-    if (isset($_POST[$names]) && !empty($_POST[$names])):
-    $verify_name = htmlspecialchars($_POST[$names], ENT_QUOTES);
-    array_push($ID, $verify_name);
+    foreach ($connexion_name as $names):
   ?>
-  <?php endif; ?>
-<?php endforeach; ?>
+    <?php
+      if (isset($_POST[$names]) && !empty($_POST[$names])):
+      $verify_name = test_input($_POST[$names]);
+      array_push($ID, $verify_name);
+    ?>
+    <?php
+      else:
+      $error = "OUPS";
+    ?>
+    <?php endif; ?>
+  <?php endforeach; ?>
+<?php endif; ?>
+
 <!doctype html>
 <html class="no-js" lang="fr">
   <head>
@@ -71,9 +90,9 @@
             </div>
           </li>
         </ul>
-        <form action="#" method="post" class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="email" id="email" aria-describedby="emailHelp" name="email" placeholder="Votre E-mail...">
-          <input class="form-control mr-sm-2" type="password" id="password" name="password" placeholder="Votre mot de passe...">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="email" id="email" aria-describedby="emailHelp" name="email" placeholder="Votre E-mail..." value="<?php echo "$error"; ?>">
+          <input class="form-control mr-sm-2" type="password" id="password" name="password" placeholder="Votre mot de passe..." value="<?php echo "$error"; ?>">
           <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Connexion</button>
         </form>
       </div>

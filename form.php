@@ -1,16 +1,14 @@
 <?php
+  include "template/nav.php";
+  include "template/header.php";
+?>
+<?php
   //this array get name of form
   $name_of_form = ["compte", "lastName", "firstName", "email", "phone", "deposit"];
   //this one is created to link the user choice in the form
   $array_label = ["Choix du compte", "Votre nom", "Votre prénom", "Votre E-mail", "Votre n° de tél", "Votre premier dépôt"];
   //we stock choice user values from form in this array
   $array_of_choice_user = [];
-  function test_input($data) {
-    $data = trim($data); // remove space of both side
-    $data = stripslashes($data);// remove backslashes
-    $data = htmlspecialchars($data, ENT_QUOTES);//both quotes
-    return $data;
-  }
 ?>
 <?php
 $error = "";
@@ -22,6 +20,7 @@ $error = "";
   ?>
     <?php
       if (!empty($_POST[$name]) && isset($_POST[$name])):
+      //function test input inside nav
       $names = test_input($_POST[$name]);
       array_push($array_of_choice_user, $names);
     ?>
@@ -33,10 +32,7 @@ $error = "";
   <?php endforeach; ?>
 <?php endif; ?>
 
-<?php
-  include "template/nav.php";
-  include "template/header.php";
-?>
+
 
 <?php //if ($info_user["Votre premier dépôt"] < 50): ?>
   <?php //echo "oups" ?>
